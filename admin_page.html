@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Team 13</title>
+    <link rel="stylesheet" href="admin_style.css" />
+  </head>
+  <body>
+    <navbar id="nav" class="nav">
+        <ul>
+            <a href="main.html"><li><button class="logo" id="logo"><img src="./icons/logo.png"></button></li></a>
+            <li><a href="#">Games</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Social Media</a></li>
+            <li><button class="mypage">admin</button></li>
+        </ul>
+    </navbar>
+
+    <div class="admin_main clearfix">
+      <div class="admin_nav">
+        <ul>
+          <li><a href="#" onclick="document.getElementById('admin_event_mag').style.display='block'; document.getElementById('admin_product_mag').style.display='none';">공지/이벤트 관리</a></li>
+          <li><a href="#" onclick="document.getElementById('admin_event_mag').style.display='none'; document.getElementById('admin_product_mag').style.display='block';">상품 관리</a></li>
+          <li><a href="#">로그아웃</a></li>
+        </ul>
+      </div>
+      <div class="admin_event_mag" id="admin_event_mag">
+        <a href="#">이벤트</a>
+      </div>
+      <div class="admin_product_mag" id="admin_product_mag">
+        <a href="#">상품 관리</a>
+      </div>
+    </div>
+  </body>
+</html>

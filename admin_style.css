@@ -1,0 +1,220 @@
+@import "fontstyle.css";
+@import "keyframes.css";
+@import url(https://fonts.googleapis.com/css?family=Exo+2:200i);
+@import "login.css";
+:root {
+    font-size: 0.3vh;
+    --neon-text-color: #08f;
+    --neon-border-color: #08f;
+    --white: rgb(255, 255, 255);
+}
+
+a {text-decoration: none; }
+a:hover { color: inherit; }
+
+body {
+    margin: 0;
+    width: 100%;
+    background: rgb(52, 50, 61);
+    font-size: 10px;
+    font-family: 'Distant Galaxy', sans-serif;
+    position: relative;
+    max-width: 100%;
+}
+
+.nav {
+    overflow: hidden;
+    background-color: rgb(5, 6, 52);
+    position: fixed;
+    display: block;
+    /* Set the navbar to fixed position */
+    top: 0;
+    z-index: 50;
+    /* Position the navbar at the top of the page */
+    width: 100vw;
+    /* Full width */
+    height: 9.5vh;
+    transition: all 0.4s;
+    /*font of all nav texs*/
+    font-size: 1.6vw;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    font-family: 'Distant Galaxy', sans-serif;
+    max-width: 100%;
+}
+
+
+/* Links inside the navbar */
+
+.nav ul {
+    height: 9.5vh;
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+.nav li {
+    margin: 0px;
+    size: 9.5vh;
+}
+
+.nav li a {
+    float: left;
+    display: block;
+    position: static;
+    color: var(--white);
+    text-align: center;
+    padding: 0 2vw;
+    margin: 0;
+    text-decoration: none;
+    transition: all 0.4s;
+    line-height: 9.5vh;
+}
+
+
+/* Change background on mouse-over */
+
+.nav li a:hover {
+    background: rgba(255, 255, 255, 0.068);
+    color: var(--white);
+    cursor: pointer;
+    border-bottom-style: solid;
+    border-width: 0.6vh;
+    border-color: rgb(24, 79, 205);
+}
+
+.nav button {
+    position: static;
+    float: left;
+    background-color: rgb(5, 6, 52);
+    border-width: 0;
+    border-style: none;
+}
+
+.nav button.cart {
+    float: right;
+}
+
+.nav .logo img {
+    display: static;
+    float: left;
+    width: 5vh;
+    height: auto;
+    padding: 2.5vh 3vh;
+    margin: 0;
+}
+
+.cart img {
+    display: static;
+    float: right;
+    width: 2vw;
+    height: auto;
+    padding: 2.1vh 1.2vw;
+    transition: all 0.2s linear;
+}
+
+.nav .mypage {
+    display: static;
+    float: right;
+    width: 8vw;
+    margin: 0.7% 1% 0px 1vh;
+    background-color: rgb(5, 6, 52);
+    color: var(--white);
+    padding: 4rem 6rem 5.5rem;
+    border: 0.4rem solid var(--white);
+    border-radius: 12px;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1.2vw;
+    letter-spacing: 0.2vh;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.mypage:focus,
+.mypage:hover {
+    text-shadow: -0.2rem -0.2rem 1rem #fff, 0.2rem 0.2rem 1rem #fff, 0 0 2rem var(--neon-text-color), 0 0 4rem var(--neon-text-color), 0 0 6rem var(--neon-text-color), 0 0 8rem var(--neon-text-color), 0 0 10rem var(--neon-text-color);
+    box-shadow: 0 0 .5rem #fff, inset 0 0 .5rem #fff, 0 0 2rem var(--neon-border-color), inset 0 0 2rem var(--neon-border-color), 0 0 4rem var(--neon-border-color), inset 0 0 4rem var(--neon-border-color);
+    cursor: pointer;
+}
+
+.logo:hover {
+    background: rgba(255, 255, 255, 0.068);
+    color: black;
+    cursor: pointer;
+}
+
+.cart img:hover {
+    -webkit-filter: drop-shadow(0px 0px 1.5vh rgb(31, 61, 255));
+    filter: drop-shadow(0px 0px 1.5vh rgb(31, 61, 255));
+    box-shadow: #fff;
+    cursor: pointer;
+}
+
+.admin_main {
+}
+/*admin nav*/
+.admin_nav {
+  float: left;
+  padding-top: 100px;
+  height: 1200px;
+  background-color: #fff;
+  width: 250px;
+}
+.admin_nav ul {
+  padding-top: 125px;
+  list-style: none;
+}
+.admin_nav ul li {
+  padding: 50px 0;
+}
+.admin_nav ul li a {
+  font-size: 25px;
+  font-family: 'Gidugu';
+  font-weight: 600;
+  color: #000;
+}
+
+/*admin_action*/
+.admin_event_mag {
+  padding-top: 100px;
+  background: #444;
+  height: 1200px;
+}
+.admin_event_mag a {
+  font-size: 20px;
+  color: #fff;
+}
+
+/* admin_product_mag */
+.admin_product_mag {
+  display: none;
+  padding-top: 100px;
+  background: #222;
+  height: 1200px;
+}
+.admin_product_mag a {
+  font-size: 20px;
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+.clearfix{ *zoom:1; }
+.clearfix:before, .clearfix:after { display: block; content: '';line-height: 0; }
+.clearfix:after { clear: both; }oom:1
+}
+
+@media query {
+
+}

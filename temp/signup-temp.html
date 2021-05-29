@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Team 13</title>
+    <link rel="stylesheet" href="signup-temp.css" />
+
+    <nav></nav>
+</head>
+
+<body>
+
+    <div id="form-signup" class="form-bg">
+        <div class="form-vw">
+            <div class="container">
+                <button class="cancel-btn" onclick="document.getElementById('form-signup').style.display='none'">X</button>
+                <div class="cont-head">SIGN UP</div>
+                <form action="/action_page.php" method="post">
+                    <div>
+                        <label for="uname">Username:</label><br>
+                        <input type="text" placeholder="USERNAME" name="uname" required class="username">
+                    </div>
+
+                    <div>
+                        <label for="psw">Password:</label><br>
+                        <input type="password" placeholder="PASSWORD" name="psw" required class="psw">
+                    </div>
+
+                    <div>
+                        <label for="check-psw">Repeat Password:</label><br>
+                        <input type="password" placeholder="PASSWORD" name="check-psw" required class="psw">
+                    </div>
+
+                    <div>
+                        <label for="email">Email:</label><br>
+                        <input type="email" placeholder="EMAIL" name="email" required class="email">
+                    </div>
+
+                    <div>
+                        <label for="phone">Phone Number:</label><br>
+                        <input type="tel" placeholder="PHONE NUMBER" name="phone" required class="phone">
+                    </div>
+
+                    <div>
+                        <label for="bday">Date of Birth:</label><br>
+                        <input type="date" placeholder="YYYY/MM/DD:" name="bday" required class="bday">
+                    </div>
+
+                    <div>
+                        <label for="bday">Address:</label><br>
+                        <input type="text" placeholder="ADDRESS:" name="bday" required class="address">
+                    </div>
+
+                    <span class="border-btn"><button type="submit" class="submit-btn">SIGN IN</button></span>
+                    <a href="#" class="form-link" onclick="document.getElementById('form-login').style.display='block'; document.getElementById('form-signup').style.display='none';">You have an account? Login</a>
+                    <a href="#" class="form-link">Forgot your password?</a>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

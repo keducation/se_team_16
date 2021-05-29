@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Distant Galaxy';
+    src: url('fonts/DistantGalaxy.eot');
+    src: url('fonts/DistantGalaxy.eot?#iefix') format('embedded-opentype'), url('fonts/DistantGalaxy.woff2') format('woff2'), url('fonts/DistantGalaxy.woff') format('woff'), url('fonts/DistantGalaxy.ttf') format('truetype'), url('fonts/DistantGalaxy.svg#DistantGalaxy') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gidugu';
+    src: url('fonts/Gidugu.eot');
+    src: url('fonts/Gidugu.eot?#iefix') format('embedded-opentype'), url('fonts/Gidugu.woff2') format('woff2'), url('fonts/Gidugu.woff') format('woff'), url('fonts/Gidugu.ttf') format('truetype'), url('fonts/Gidugu.svg#Gidugu') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FortySecondStreetHB';
+    src: url('fonts/FortySecondStreetHB.eot');
+    src: url('fonts/FortySecondStreetHB.eot?#iefix') format('embedded-opentype'), url('fonts/FortySecondStreetHB.woff2') format('woff2'), url('fonts/FortySecondStreetHB.woff') format('woff'), url('fonts/FortySecondStreetHB.ttf') format('truetype'), url('fonts/FortySecondStreetHB.svg#FortySecondStreetHB') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PressStart';
+    src: url('fonts/PressStart.eot');
+    src: url('fonts/PressStart.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('fonts/PressStart.woff2') format('woff2'), /* Super Modern Browsers */
+    url('fonts/PressStart.woff') format('woff'), /* Pretty Modern Browsers */
+    url('fonts/PressStart.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('fonts/PressStart.svg#svgFontName') format('svg');
+    /* Legacy iOS */
+    font-weight: 400;
+    font-style: normal;
+}
