@@ -1,4 +1,3 @@
-@import url(../fontstyle.css);
 :root {
     --white: rgb(255, 255, 255);
     --nav-blue: rgb(5, 6, 52);
@@ -6,16 +5,8 @@
     --cloudy: #e2e2e2;
 }
 
-body {
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    background: rgb(52, 50, 61);
-    font-size: 10px;
-    font-family: 'Distant Galaxy', sans-serif;
-}
-
 .form-bg {
+    display: none;
     position: fixed;
     z-index: 51;
     left: 0;
@@ -27,6 +18,7 @@ body {
     background-color: rgba(0, 0, 0, 0.6);
     margin: 0;
     padding: 0;
+    max-width: 100%;
 }
 
 .form-vw {
@@ -39,36 +31,70 @@ body {
     justify-content: center;
 }
 
-#form-login .container {
-    background-image: url(../bg/sign-bg.png);
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    width: auto;
-    height: auto;
+.container {
+    background-size: cover;
+    background-position: center;
+    width: max-content;
     color: var(--white);
-    display: flex;
     position: relative;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    transition: all .4s;
+}
+
+label {
+    width: 100%;
+    float: left;
+    justify-content: left;
+}
+
+#form-login .container,
+#form-signup .container,
+#form-forgot .container {
+    background-image: url(./bg/sign-bg.png);
+    background-repeat: no-repeat;
+}
+
+#form-login .container,
+#form-forgot .container {
+    height: auto;
+}
+
+#form-signup .container,
+#form-description .container {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 80vh;
+}
+
+#form-description .container {
+    background-color: var(--darkblue);
 }
 
 .container .cont-head {
     font-family: 'Distant Galaxy', sans-serif;
     font-size: 4vw;
-    top: 5.8vh;
-    position: absolute;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 20vh;
+    margin: 0;
 }
 
-.container form {
+.container .alignform {
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    margin: 7vw 9.5vw 2vw 9.5vw;
+    align-self: center;
+    align-content: center;
     font-family: 'Gidugu';
+    height: max-content;
+    width: max-content;
+}
+
+.container form {
+    margin: 0 9.5vw 2vw 9.5vw;
 }
 
 .container input {
@@ -125,17 +151,19 @@ body {
 .container .cancel-btn {
     font-family: 'Distant Galaxy';
     position: absolute;
-    display: block;
+    z-index: 53;
     background-color: var(--nav-blue);
-    padding: 0.5vw 0.8vw;
+    width: 2.3vw;
+    height: 4.3vh;
     font-size: 1vw;
-    top: 0;
+    line-height: 4vh;
+    top: 5px;
     right: 0;
     color: var(--white);
     border: 2px solid var(--white);
-    margin: 5px;
+    margin: 8px;
     cursor: pointer;
-    transition: all 0.4s;
+    transition: all .4s;
 }
 
 .cancel-btn:hover,
@@ -146,8 +174,47 @@ body {
 }
 
 label {
-    line-height: 0.3vw;
-    margin-top: 0.7vw;
+    line-height: 1.4vw;
     padding: 0;
     font-size: 1.4vw;
+}
+
+:root {
+    --white: rgb(255, 255, 255);
+    --nav-blue: rgb(5, 6, 52);
+    --brown: rgb(52, 50, 61);
+    --cloudy: #e2e2e2;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.vl {
+    border-left: 4px solid #888;
+    height: 100vh;
+    position: absolute;
+    left: 10%;
+    z-index: 1;
 }

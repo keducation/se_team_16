@@ -1,23 +1,27 @@
   .slider {
-      width: 100%;
-      height: 91vh;
-      position: center;
-      margin-bottom: 1px;
+      width: 100vw;
+      height: 90.5vh;
+      position: relative;
+      display: block;
+      max-width: 100%;
   }
   
   .slider-wrapper {
       width: 100%;
-      height: 100%;
+      height: 90.5vh;
       position: absolute;
+      display: block;
+      margin: 0;
   }
   
   .slide {
       float: left;
       position: absolute;
       width: 100%;
-      height: 91vh;
+      height: 100%;
       opacity: 0;
       transition: opacity 3s linear;
+      margin: 0;
   }
   
   .slider-wrapper>.slide:first-child {
