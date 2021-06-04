@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="signup-temp.css">
+    <script src="https://kit.fontawesome.com/f6816dd194.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="form-login" class="form-bg">
+        <div class="form-vw">
+            <div class="container">
+                <button class="cancel-btn" onclick="document.getElementById('form-login').style.display='none'">X</button>
+                <div class="cont-head">LOGIN</div>
+
+                <form action="/action_page.php" method="post">
+                    <label for="uname-login"></label><br>
+                    <input type="text" placeholder="USERNAME" name="uname-login" required class="username">
+                    <label for="psw-login"></label><br>
+                    <input type="password" placeholder="PASSWORD" name="psw-login" required class="psw">
+                    <span class="border-btn"><button type="submit" class="submit-btn">SIGN IN</button></span>
+                    <a href="#" class="form-link" onclick="document.getElementById('form-signup').style.display='block'; document.getElementById('form-login').style.display='none';">You don't have an account? Create one</a>
+                    <a href="#" class="form-link">Forgot your password?</a>
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

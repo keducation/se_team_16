@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Team 13</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="GamePage.css" />
+    <link rel="stylesheet" href="slide.css" />
+    <script type="text/javascript" src="slidejs.js"></script>
+    <nav></nav>
+</head>
+
+<body>
+    <navbar id="nav" class="nav">
+        <ul>
+            <li>
+                <a href="./main.html" class="logo" id="logo"><img src="./icons/logo.png"></a>
+            </li>
+            <li><a href="./GamePage.html" class="section">Games</a></li>
+            <li><a href="main.html#section2" class="section">News</a></li>
+            <li><a href="main.html#section3" class="section">About</a></li>
+            <li><a href="main.html#section4" class="section">Social Media</a></li>
+            <li><button class="login" onclick="document.getElementById('form-login').style.display='block'">login</button></li>
+            <li><button class="cart"><img src="./icons/cart.png"></button></li>
+
+        </ul>
+    </navbar>
+
+
+
+    <div id="form-login" class="form-bg">
+        <div class="form-vw">
+            <div class="container">
+                <button class="cancel-btn" onclick="document.getElementById('form-login').style.display='none'">X</button>
+                <div class="cont-head">LOGIN</div>
+                <form action="/action_page.php" method="post" class="alignform">
+                    <label for="uname-login"></label><br>
+                    <input type="text" placeholder="USERNAME" name="uname-login" required class="username">
+                    <label for="psw-login"></label><br>
+                    <input type="password" placeholder="PASSWORD" name="psw-login" required class="psw">
+                    <span class="border-btn"><button type="submit" class="submit-btn">SIGN IN</button></span>
+                    <a href="#" class="form-link" onclick="document.getElementById('form-signup').style.display='block'; document.getElementById('form-login').style.display='none';">You don't have an account? Create one</a>
+                    <a href="#" class="form-link" onclick="document.getElementById('form-forgot').style.display='block'; document.getElementById('form-login').style.display='none';">Forgot your password?</a>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="form-signup" class="form-bg">
+        <div class="form-vw">
+            <div class="container">
+                <button class="cancel-btn" onclick="document.getElementById('form-signup').style.display='none'">X</button>
+                <div class="cont-head">SIGN UP</div>
+                <form action="/action_page.php" method="post" class="alignform">
+                    <div>
+                        <label for="name">Name:</label><br>
+                        <input type="text" placeholder="NAME" name="name" required class="name">
+                    </div>
+                    <div>
+                        <label for="uname">Username:</label><br>
+                        <input type="text" placeholder="USERNAME" name="uname" required class="username">
+                    </div>
+
+                    <div>
+                        <label for="psw">Password:</label><br>
+                        <input type="password" placeholder="PASSWORD" name="psw" required class="psw">
+                    </div>
+
+                    <div>
+                        <label for="check-psw">Repeat Password:</label><br>
+                        <input type="password" placeholder="PASSWORD" name="check-psw" required class="psw">
+                    </div>
+
+                    <div>
+                        <label for="email">Email:</label><br>
+                        <input type="email" placeholder="EMAIL" name="email" required class="email">
+                    </div>
+
+                    <div>
+                        <label for="phone">Phone Number:</label><br>
+                        <input type="tel" placeholder="PHONE NUMBER" name="phone" required class="phone">
+                    </div>
+
+                    <div>
+                        <label for="bday">Date of Birth:</label><br>
+                        <input type="date" placeholder="YYYY/MM/DD:" name="bday" required class="bday">
+                    </div>
+
+                    <div>
+                        <label for="bday">Address:</label><br>
+                        <input type="text" placeholder="ADDRESS:" name="bday" required class="address">
+                    </div>
+
+                    <span class="border-btn"><button type="submit" class="submit-btn">SIGN IN</button></span>
+                    <a href="#" class="form-link" onclick="document.getElementById('form-login').style.display='block'; document.getElementById('form-signup').style.display='none';">You have an account? Login</a>
+                    <a href="#" class="form-link" onclick="document.getElementById('form-forgot').style.display='block'; document.getElementById('form-signup').style.display='none';">Forgot your password?</a>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="form-description" class="form-bg">
+        <div class="form-vw">
+            <div class="container">
+                <div class="alignform">
+                    <button class="cancel-btn" onclick="document.getElementById('form-description').style.display='none'">X</button>
+                    <img src="./images/1.jpg">
+                    <div class="productName" id="productName">Game Name . 2021.06.02</div>
+                    <div id="productDesc" class="productDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras maximus tortor quis felis egestas, nec hendrerit tellus semper. Sed luctus ante tellus, eu rutrum ipsum vulputate non. Integer eu maximus odio. Nunc mattis lacus eget lacus
+                        dictum dapibus. Quisque mattis sapien risus, quis mollis ex vehicula et. Duis at enim quis ipsum vestibulum porta. Suspendisse potenti. Vestibulum consectetur at dui id pulvinar. In posuere enim et lectus dictum ornare. Vivamus
+                        vehicula eget dolor quis venenatis. Donec metus massa, fringilla a faucibus sed, ullamcorper sed ex. Maecenas lobortis augue orci. Curabitur hendrerit tincidunt mattis. Aenean a quam leo. Vivamus vitae odio sit amet tortor sagittis
+                        vehicula vitae aliquet urna. Curabitur vulputate facilisis tortor, et mattis nulla. Fusce varius vitae dui id interdum. Proin malesuada eget dolor vel scelerisque. Vestibulum in suscipit orci, quis fringilla risus.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="form-forgot" class="form-bg">
+        <div class="form-vw">
+            <div class="container">
+                <button class="cancel-btn" onclick="document.getElementById('form-forgot').style.display='none'">X</button>
+                <div class="cont-head">RECOVER PASSWORD</div>
+                <form action="/action_page.php" method="post" class="alignform">
+                    <label for="email-forgot" style="line-height: 0.5vw; margin-bottom: 0; padding-bottom: 0;">INPUT YOUR EMAIL</label><br>
+                    <input type="text" placeholder="EMAIL" name="email-forgot" required class="username">
+                    <span class="border-btn"><button type="submit" class="submit-btn">SEND EMAIL</button></span>
+                    <a href="#" class="form-link" onclick="document.getElementById('form-login').style.display='block'; document.getElementById('form-forgot').style.display='none';">You have an account?</a>
+                    <a href="#" class="form-link" onclick="document.getElementById('form-signup').style.display='block'; document.getElementById('form-forgot').style.display='none';">You don't have an account? Create one</a>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="main games">
+        <div class="box banner">
+            <p>Games</p>
+        </div>
+
+        <div class="grid-container">
+            <div class="flex-item">
+                <div class="games_hover"><img src="./images/1.jpg" class="image_games">
+                    <button id="description" onclick="document.getElementById('form-description').style.display='block'"><span>Description</span></button><button id="add_cart"><span>Add to Cart</span></button>
+                </div>
+
+                <div class="games_title">
+                    01. Games 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+            </div>
+
+
+            <div class="flex-item">
+                <div class="games_hover"><img src="./images/1.jpg" class="image_games">
+                    <button id="description" onclick="document.getElementById('form-description').style.display='block'"><span>Description</span></button><button id="add_cart"><span>Add to Cart</span></button>
+                </div>
+
+                <div class="games_title">
+                    01. Games 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+            </div>
+
+            <div class="flex-item">
+                <div class="games_hover"><img src="./images/1.jpg" class="image_games">
+                    <button id="description" onclick="document.getElementById('form-description').style.display='block'"><span>Description</span></button><button id="add_cart"><span>Add to Cart</span></button>
+                </div>
+
+                <div class="games_title">
+                    01. Games 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+            </div>
+            <div class="flex-item">
+                <div class="games_hover"><img src="./images/1.jpg" class="image_games">
+                    <button id="description" onclick="document.getElementById('form-description').style.display='block'"><span>Description</span></button><button id="add_cart"><span>Add to Cart</span></button>
+                </div>
+
+                <div class="games_title">
+                    01. Games 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+            </div>
+            <div class="flex-item">
+                <div class="games_hover"><img src="./images/1.jpg" class="image_games">
+                    <button id="description" onclick="document.getElementById('form-description').style.display='block'"><span>Description</span></button><button id="add_cart"><span>Add to Cart</span></button>
+                </div>
+
+                <div class="games_title">
+                    01. Games 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+            </div>
+            <div class="flex-item">
+                <div class="games_hover"><img src="./images/1.jpg" class="image_games">
+                    <button id="description" onclick="document.getElementById('form-description').style.display='block'"><span>Description</span></button><button id="add_cart"><span>Add to Cart</span></button>
+                </div>
+
+                <div class="games_title">
+                    01. Games 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+            </div>
+            <div class="flex-item">
+                <div class="games_hover"><img src="./images/1.jpg" class="image_games">
+                    <button id="description" onclick="document.getElementById('form-description').style.display='block'"><span>Description</span></button><button id="add_cart"><span>Add to Cart</span></button>
+                </div>
+
+                <div class="games_title">
+                    01. Games 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+            </div>
+            <div class="flex-item">
+                <div class="games_hover"><img src="./images/1.jpg" class="image_games">
+                    <button id="description" onclick="document.getElementById('form-description').style.display='block'"><span>Description</span></button><button id="add_cart"><span>Add to Cart</span></button>
+                </div>
+
+                <div class="games_title">
+                    01. Games 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+            </div>
+        </div>
+
+        <h1></h1>
+    </div>
+</body>
+
+</html>

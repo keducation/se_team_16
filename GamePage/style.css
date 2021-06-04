@@ -1,0 +1,434 @@
+@import "fontstyle.css";
+@import "keyframes.css";
+@import url(https://fonts.googleapis.com/css?family=Exo+2:200i);
+@import "login.css";
+@import "GamePage.css";
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    font-size: 0.3vh;
+    --neon-text-color: #08f;
+    --neon-border-color: #08f;
+    --white: rgb(255, 255, 255);
+    --cyan: rgb(9, 220, 222);
+    --darkblue: rgb(5, 6, 52);
+    --bg-color: rgb(52, 50, 61);
+}
+
+body {
+    margin: 9.5vh 0 0 0;
+    width: 100%;
+    background: var(--bg-color);
+    font-size: 10px;
+    font-family: 'Distant Galaxy', sans-serif;
+    position: relative;
+    max-width: 100%;
+}
+
+.nav {
+    overflow: hidden;
+    background-color: var(--darkblue);
+    position: fixed;
+    display: block;
+    /* Set the navbar to fixed position */
+    top: 0;
+    z-index: 50;
+    /* Position the navbar at the top of the page */
+    width: 100vw;
+    /* Full width */
+    height: 9.5vh;
+    transition: all 0.4s;
+    /*font of all nav texs*/
+    font-size: 1.6vw;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    font-family: 'Distant Galaxy', sans-serif;
+    max-width: 100%;
+    animation: loadtop 300ms;
+}
+
+.nav ul {
+    height: 9.5vh;
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+.nav li {
+    margin: 0px;
+    size: 9.5vh;
+}
+
+.nav li .section {
+    float: left;
+    display: block;
+    position: static;
+    color: var(--white);
+    text-align: center;
+    padding: 0 2vw;
+    margin: 0;
+    text-decoration: none;
+    transition: all 0.4s;
+    line-height: 9.5vh;
+}
+
+.nav li a:hover {
+    background: rgba(255, 255, 255, 0.068);
+    color: var(--white);
+    cursor: pointer;
+    border-bottom-style: solid;
+    border-width: 0.6vh;
+    border-color: rgb(24, 79, 205);
+}
+
+.nav button {
+    position: static;
+    float: left;
+    background-color: rgb(5, 6, 52);
+    border-width: 0;
+    border-style: none;
+}
+
+.nav button.cart {
+    float: right;
+}
+
+.nav .logo img {
+    display: static;
+    float: left;
+    width: 5vh;
+    height: auto;
+    padding: 2.5vh 3vh;
+    margin: 0;
+    opacity: 1;
+}
+
+.cart img {
+    display: static;
+    float: right;
+    width: 2vw;
+    height: auto;
+    padding: 2.1vh 1.2vw;
+    transition: all 0.2s linear;
+}
+
+.nav .login {
+    display: static;
+    float: right;
+    width: 8vw;
+    margin: 0.7% 1% 0px 1vh;
+    background-color: rgb(5, 6, 52);
+    color: var(--white);
+    padding: 4rem 6rem 5.5rem;
+    border: 0.4rem solid var(--white);
+    border-radius: 12px;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1.2vw;
+    letter-spacing: 0.2vh;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.login:focus,
+.login:hover {
+    text-shadow: -0.2rem -0.2rem 1rem #fff, 0.2rem 0.2rem 1rem #fff, 0 0 2rem var(--neon-text-color), 0 0 4rem var(--neon-text-color), 0 0 6rem var(--neon-text-color), 0 0 8rem var(--neon-text-color), 0 0 10rem var(--neon-text-color);
+    box-shadow: 0 0 .5rem #fff, inset 0 0 .5rem #fff, 0 0 2rem var(--neon-border-color), inset 0 0 2rem var(--neon-border-color), 0 0 4rem var(--neon-border-color), inset 0 0 4rem var(--neon-border-color);
+    cursor: pointer;
+}
+
+.logo:hover img {
+    background: rgba(255, 255, 255, 0.068);
+    color: black;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.cart img:hover {
+    -webkit-filter: drop-shadow(0px 0px 1.5vh rgb(31, 61, 255));
+    filter: drop-shadow(0px 0px 1.5vh rgb(31, 61, 255));
+    box-shadow: #fff;
+    cursor: pointer;
+}
+
+.head-news {
+    display: block;
+    position: absolute;
+    top: 15vh;
+    z-index: 49;
+    left: 23.3vh;
+    font-family: 'FortySecondStreetHB';
+    color: rgb(253, 249, 255);
+    animation: loaddown 800ms;
+}
+
+.box {
+    width: 100vw;
+    height: 90.5vh;
+    position: relative;
+    display: block;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+}
+
+.news {
+    background-image: url("bg/bg2.png");
+    background-repeat: center;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+}
+
+.news .flex-container {
+    position: absolute;
+    top: 28vh;
+    left: 11.1vw;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    height: 50vh;
+    width: 85vw;
+    margin: 0;
+}
+
+.flex-item {
+    padding: 0;
+    position: flex relative;
+    flex-direction: column;
+    margin: 0;
+}
+
+.flex-container .flex-item {
+    width: 25vw;
+    margin-right: 2vw;
+    gap: 0px;
+}
+
+.img_news {
+    width: 23.1vw;
+    height: auto;
+}
+
+.flex-item p,
+.flex-item div {
+    font-family: 'Gidugu';
+    color: rgb(163, 165, 161);
+    text-decoration: none;
+    margin: 0;
+    width: 100%;
+}
+
+.extra-txt {
+    font-family: 'Gidugu';
+    color: rgb(163, 165, 161);
+    text-decoration: none;
+    display: block;
+    position: absolute;
+    margin: auto;
+    letter-spacing: 2px;
+    top: 22vh;
+    z-index: 49;
+    left: 85%;
+}
+
+.about {
+    background-image: url("bg/bg5.2.png");
+    background-repeat: center;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+}
+
+.about .text {
+    display: block;
+    position: absolute;
+    left: 15vw;
+    width: 30vw;
+    height: 40vh;
+    top: 38vh;
+    font: 1.5vw/3.5vh 'Gidugu';
+}
+
+.about img {
+    display: block;
+    position: absolute;
+    left: 39vw;
+    top: 0vh;
+    padding: 7px;
+    margin: 0;
+    width: 33vw;
+    height: auto;
+    border: solid 1px var(--cyan);
+}
+
+.social {
+    background-image: url("bg/bg6.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+}
+
+.social .pacman {
+    display: block;
+    position: absolute;
+    width: 25vw;
+    height: auto;
+    left: 18vw;
+    top: 20vh;
+}
+
+p,
+.extra-txt,
+.text,
+.text_title {
+    animation: textload 200ms;
+}
+
+.grid-social {
+    display: grid;
+    position: absolute;
+    grid-template-columns: auto auto;
+    width: max-content;
+    height: 10vw;
+    gap: 2vw 5vw;
+    left: 60vw;
+    top: 23vw;
+    z-index: 45;
+}
+
+.outline {
+    border: var(--darkblue) solid 2px;
+    padding: 0;
+    margin: 0;
+    width: max-content;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 46;
+}
+
+.social a {
+    width: 4vw;
+    height: 4vw;
+    border: none;
+    padding: 0;
+    margin: 3px;
+    box-shadow: 0;
+}
+
+.fb {
+    background: url("./icons/facebook.png");
+    background-color: var(--darkblue);
+    background-repeat: no-repeat;
+    background-size: 3.4vw 3.4vw;
+    background-position: center;
+}
+
+.ig {
+    background: url("./icons/instagram.png");
+    background-color: var(--darkblue);
+    background-repeat: no-repeat;
+    background-size: 3.4vw 3.4vw;
+    background-position: center;
+}
+
+.yt {
+    background: url("./icons/youtube.png");
+    background-color: var(--darkblue);
+    background-repeat: no-repeat;
+    background-size: 3.4vw 3.4vw;
+    background-position: center;
+}
+
+.tt {
+    background: url("./icons/twitter.png");
+    background-color: var(--darkblue);
+    background-repeat: no-repeat;
+    background-size: 3.4vw 3.4vw;
+    background-position: center;
+}
+
+.tt:focus,
+.tt:hover {
+    cursor: pointer;
+    background: url("./icons/twitter2.png");
+    background-color: rgb(42, 169, 224);
+    background-repeat: no-repeat;
+    background-size: 3.4vw 3.4vw;
+    background-position: center;
+    animation: textload 800ms;
+}
+
+.tto:focus,
+.tto:hover {
+    border-color: rgb(42, 169, 224);
+}
+
+.yt:focus,
+.yt:hover {
+    cursor: pointer;
+    background: url("./icons/youtube2.png");
+    background-color: rgb(208, 44, 43);
+    background-repeat: no-repeat;
+    background-size: 3.4vw 3.4vw;
+    background-position: center;
+    animation: textload 800ms;
+}
+
+.yto:focus,
+.yto:hover {
+    border-color: rgb(208, 44, 43);
+}
+
+.fb:focus,
+.fb:hover {
+    cursor: pointer;
+    background: url("./icons/facebook2.png");
+    background-color: rgb(45, 72, 117);
+    background-repeat: no-repeat;
+    background-size: 3.4vw 3.4vw;
+    background-position: center;
+    animation: textload 800ms;
+}
+
+.fbo:focus,
+.fbo:hover {
+    border-color: rgb(45, 72, 117);
+}
+
+.ig:focus,
+.ig:hover {
+    cursor: pointer;
+    background: url("./icons/instagram2.png");
+    background-color: rgb(77, 77, 77);
+    background-repeat: no-repeat;
+    background-size: 3.4vw 3.4vw;
+    background-position: center;
+    animation: textload 800ms;
+}
+
+.igo:focus,
+.igo:hover {
+    border-color: rgb(77, 77, 77);
+}
+
+@keyframes textload {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
